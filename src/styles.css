@@ -1,1 +1,340 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    padding: 1rem;
+  }
+  
+  .container-web{
+    display: grid;
+    grid-template-areas: 
+    "container-header"
+    "container-main";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  
+  .container-header{
+    background-color:#A0BCC2;
+    padding: 0 3%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .container-header img{
+    height: 70px;
+  }
+  
+  .header-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav-social-icons i {
+   color: white;
+   padding: 10px;
+   justify-content: space-around;
+  }
+ 
+  
+  .container-main{
+    grid-area: container-main;
+  }
+  
+  .banner{
+    background-image: url(./assets/banner/banner.jpg);
+    height: 220px;
+    width: 100%; 
+    background-repeat: no-repeat;
+    display: flex;
+  }
+  
+  
+  @keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  @keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  .animated-title {
+    color: #222;
+    font-family: Arial, sans-serif;
+    opacity: 1;
+    height: 90vmin;
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+  .animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .animated-title > div div {
+    font-size: 40px;
+    padding: 2vmin 0;
+    position: relative;
+    top: 75%;
+  }
+  .animated-title > div div span {
+    display: block;
+  }
+  .animated-title > div.text-top {
+    border-bottom: 1vmin solid rgb(0, 0, 0);
+    top: 0;
+    position: relative;
+  }
+  .animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
+  .animated-title > div.text-top div span:first-child {
+    color: #767676;
+  }
+  .animated-title > div.text-bottom {
+    bottom: 0;
+  }
+  .animated-title > div.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+  }
+  
+  #acercaDeMi{
+    background-color: black;
+  }
+  
+  #perfilfoto {
+      height: 250px;
+      width: 250px; 
+      padding: 10%;
+      border-radius: 125px;
+      vertical-align: middle;
+    }
+  
+  
+    .acercaDeMi{
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: auto 30px;
+      background-color: beige;
+      margin-bottom: 10px;
+      padding: 2% 0;
+  }
+  
+  .imagen{
+      grid-column-start: 1;
+      grid-column-end: 2;
+  }
+  
+  .text-acercaDeMi{
+      grid-column-start: 2;
+      grid-column-end: 4;
+  }
+  
+  .frase{
+      grid-column-start: 1;
+      grid-column-end: 4;
+  }
+  
+  @media (max-width:970px){
+      .acercaDeMi{
+          display: flex;
+          flex-direction: column;
+      }
+  }
+  
+  #cuadros{
+  border-color: black;
+  }
+  
+  .card-nombre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  @media (max-width:990px){
+    .animated-title {
+      top: 56%;
+    }
+  
+    .animated-title > div div {
+      font-size: 26px;
+  }
+    .header-nav{
+      flex-direction: column;
+    }
+  
+    .container-header{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .box-title{
+    font-family: 'Old Standard TT', serif;
+    background-color: #DAE5D0;
+  }
+  .text-title{
+    padding-top: 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+  }
+  
+  .text-title p{
+  background-color: #A0BCC2;
+  }
+  
+  .card-list{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0%;
+  }
+  
+  .item-list{
+    list-style: none;
+    border-radius: 32px;
+    border-color:#DAE5D0;
+    border-style: double;
+    border-width: 5px;
+    background-color: #FEFBE7;
+    margin-bottom: 1rem;
+    padding: 5px 5px;
+  }
+  
+  .item-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .item-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .item-img img{
+    width: 12rem;
+    padding: 1rem 1rem;
+  }
+  
+  .item-texto{
+    font-size: 20px;
+    padding: 1rem 1rem;
+  }
+  
+  .container-circulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background-color: #DAE5D0;
+  }
+  
+  .box{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
+  }
+  
+  .box .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;    
+  }
+  
+  .box .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .box .percent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    stroke-linecap: round;
+  }
+  
+  .box .percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+  }
+  
+  .box .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 *87) /100);
+    stroke: #A0BCC2;
+    opacity: 10;
+    animation: animate-circle 3s cubic-bezier(0,0.23,1,.1); 
+  }
+  
+  .box .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+  }
+  
+  .box .percent .number h2{
+    font-size: 48px;
+  }
+  
+  .box .percent .number h2 span{
+    font-size: 24px;
+  }
+  
+  .box .text{
+    padding: 10px 0 0;
+    color: #999;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  
+  @keyframes animate-circle {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 440;
+    }
+    30% {
+        opacity: 0.30;
+        stroke-dashoffset: 200;
+    }
+    80% {
+        opacity: 0.80;
+        stroke-dashoffset: 100;
+    }
+    100% {
+        opacity: 10;
+    }
+  }

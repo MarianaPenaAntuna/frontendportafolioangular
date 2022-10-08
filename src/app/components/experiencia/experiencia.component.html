@@ -1,0 +1,76 @@
+<section>
+  <div class="box-title">
+    <app-header-experiencia></app-header-experiencia>
+    <div class="text-title">
+      <app-add-experiencia (onAddExperiencia)="addExperiencia($event)">
+      </app-add-experiencia>
+    </div>
+
+    <div class="list">
+      <ul class="card-list">
+        <li *ngFor="let experiencia of experiencias" class="item-list">
+          <div class="item-head">
+            <div class="item-name">
+              <div *ngIf="experiencia.esEdit">
+                <input type="text" [(ngModel)]="experiencia.lugar" class="form-control" />
+              </div>
+              <div *ngIf="!experiencia.esEdit">
+                <h3>{{experiencia.lugar}} </h3>
+              </div>
+            </div>
+            <div class="edit-icons">
+              <div class="botones-edicion">
+                <div *ngIf="experiencia.esEdit">
+                  <button class="btn btn-sm btn-success" (click)="onAddUpdate(experiencia)">Update</button>
+                  <button class="btn btn-sm btn-danger" (click)="experiencia.esEdit=false">Cancel</button>
+                </div>
+                <div *ngIf="!experiencia.esEdit">
+                  <i class="fa fa-pencil" aria-hidden="true" style="font-size:24px" (click)="onEdit(experiencia)"></i>
+                </div>
+              </div>
+              <i class="fa fa-trash" aria-hidden="true" style="font-size:24px"
+                (click)="deleteExperiencia(experiencia)"></i>
+
+            </div>
+          </div>
+          <div class="item-content">
+            <div class="item-img">
+              <div *ngIf="experiencia.esEdit">
+                <input type="text" [(ngModel)]="experiencia.img" class="form-control" />
+              </div>
+              <div *ngIf="!experiencia.esEdit">
+                <img [src]="experiencia.img">
+              </div>
+            </div>
+            <div class="item-texto">
+              <div class="puesto">
+                <div *ngIf="experiencia.esEdit">
+                  <input type="text" [(ngModel)]="experiencia.puesto" class="form-control" />
+                </div>
+                <div *ngIf="!experiencia.esEdit">
+                  <p>{{experiencia.puesto}}</p>
+                </div>
+                <div class="descripcion">
+                  <div *ngIf="experiencia.esEdit">
+                    <input type="text" [(ngModel)]="experiencia.tareas" class="form-control" />
+                  </div>
+                  <div *ngIf="!experiencia.esEdit">
+                    <p>{{experiencia.tareas}}</p>
+                  </div>
+                  <div class="periodo">
+                    <div *ngIf="experiencia.esEdit">
+                      <input type="text" [(ngModel)]="experiencia.fecha" class="form-control" />
+                    </div>
+                    <div *ngIf="!experiencia.esEdit">
+                      <p>{{experiencia.fecha}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

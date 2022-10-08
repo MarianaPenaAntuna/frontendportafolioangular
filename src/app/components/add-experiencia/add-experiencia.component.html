@@ -1,0 +1,38 @@
+<form class="add-form" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddExp"
+>
+    <div class="form-control"> 
+        <label for="text">Lugar laboral</label>
+        <input type="text" name="lugar" id="lugar" placeholder="Ingrese lugar"
+        [(ngModel)]="lugar">
+    </div>
+
+    <div class="form-control"> 
+        <label for="text">url logo empresa</label>
+        <input type="text" name="img" id="img" placeholder="Ingrese logo empresa"
+        [(ngModel)]="img">
+    </div>
+
+    <div class="form-control"> 
+        <label for="text">puesto</label>
+        <input type="text" name="puesto" id="puesto" placeholder="Ingrese el puesto ocupado"
+        [(ngModel)]="puesto">
+    </div>
+
+    <div class="form-control"> 
+        <label for="text">Tareas realizadas</label>
+        <input type="tareas" name="tareas" id="tareas" placeholder="Ingrese las tareas realizadas"
+        [(ngModel)]="tareas">
+    </div>
+
+    <div class="form-control"> 
+        <label for="text">Año de ingreso y egreso</label>
+        <input type="text" name="fecha" id="fecha" placeholder="Ingrese de ingreso y egreso del empleo mencionado"
+        [(ngModel)]="fecha">
+    </div>
+    
+    <input type="submit" value="Guardar registro" class="btn btn-success">
+
+</form>
+

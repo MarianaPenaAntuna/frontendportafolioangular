@@ -1,0 +1,40 @@
+{
+  "experiencias": [
+    {
+      "id": "14",
+      "img": "",
+      "lugar": "UFLO - Facultad de Psicologia",
+      "puesto": "Jefa de trabajos prácticos en materia Psicopatologia",
+      "tareas": "dictado de clases y armado de curricula",
+      "fecha": "2003-2012",
+      "esEdit": "false"
+    },
+    {
+      "id": "16",
+      "img": "",
+      "lugar": "ISalud - Facultad de Nutrición",
+      "puesto": "ayudante materias Psicologia para nutricionistas",
+      "tareas": "dictado de clases",
+      "fecha": "2009-2010",
+      "esEdit": "false"
+    },
+    {
+      "id": "17",
+      "img": "",
+      "lugar": "GCBA - Centro de Salud n*3 Ameghino",
+      "puesto": "terapeuta y jefa de servicio Adultos Turno Tarde",
+      "tareas": "conduccion de terapias y organización de servicio -dos fecha-",
+      "fecha": "2000-2008",
+      "esEdit": "false"
+    },
+    {
+      "id": "12",
+      "img": "",
+      "lugar": "Galeno - MAPFRE -art-",
+      "puesto": "psicologa",
+      "tareas": "terapia post accidentes laborales",
+      "fecha": "2005-2010",
+      "esEdit": "false"
+    }
+  ]
+}
