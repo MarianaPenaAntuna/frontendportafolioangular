@@ -34,12 +34,12 @@
             </div>
           </div>
           <div class="item-content">
-            <div class="item-img">
+            <div class="item-img" style="width: 170px; height: 170px;">
               <div *ngIf="experiencia.esEdit">
-                <input type="text" [(ngModel)]="experiencia.img" class="form-control" />
+                <input type="text" [(ngModel)]="experiencia.imagen" class="form-control" />
               </div>
               <div *ngIf="!experiencia.esEdit">
-                <img [src]="experiencia.img">
+                <img [src]="experiencia.imagen">
               </div>
             </div>
             <div class="item-texto">
@@ -52,10 +52,10 @@
                 </div>
                 <div class="descripcion">
                   <div *ngIf="experiencia.esEdit">
-                    <input type="text" [(ngModel)]="experiencia.tareas" class="form-control" />
+                    <input type="text" [(ngModel)]="experiencia.descripcion" class="form-control" />
                   </div>
                   <div *ngIf="!experiencia.esEdit">
-                    <p>{{experiencia.tareas}}</p>
+                    <p>{{experiencia.descripcion}}</p>
                   </div>
                   <div class="periodo">
                     <div *ngIf="experiencia.esEdit">

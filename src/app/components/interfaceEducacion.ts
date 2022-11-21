@@ -2,9 +2,8 @@
 export interface Experiencia{
     esEdit: boolean;
     id?: number,
-    imagen: string,
+    img: string,
     lugar: string,
-    puesto: string,
-    descripcion: string,
+    curso: string,
     fecha: string
 }

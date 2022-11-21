@@ -14,26 +14,26 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiUrl = "http://localhost:5002/experiencia";
+  private apiUrl = "http://localhost:8080/experiencias/";
 
   constructor(private http:HttpClient) { }
   
 
   getExperiencias(): Observable<Experiencia[]>{
-    return this.http.get<Experiencia[]>(this.apiUrl)
+    return this.http.get<Experiencia[]>(this.apiUrl + "traer")
   }
 
  deleteExperiencia(experiencia:Experiencia):Observable<Experiencia>{
-  const url= `${this.apiUrl}/${experiencia.id}`
-  return this.http.delete<Experiencia>(url)
+  const url= `${this.apiUrl}borrar/${experiencia.id}`
+  return this.http.delete<Experiencia>(url);
  }
 
  addExperiencia(experiencia: Experiencia): Observable<Experiencia>{
-  return this.http.post<Experiencia>(this.apiUrl, experiencia, httpOptions)
+  return this.http.post<Experiencia>(this.apiUrl + "crear", experiencia, httpOptions)
  }
 
  onAddUpdate(experiencia:Experiencia): Observable<Experiencia>{
-  const url= `${this.apiUrl}/${experiencia.id}`
+  const url= `${this.apiUrl + "editar"}/${experiencia.id}`
   return this.http.put<Experiencia>(url, experiencia, httpOptions) 
 }
 

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PortfolioService } from './servicios/portfolio.service';
 import { FormsModule } from '@angular/forms';
 import { UiService } from './servicios/ui.service';
+import { NgCircleProgressModule } from 'ng-circle-progress'
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BotonAgregarComponent } from './components/boton-agregar/boton-agregar.component';
 import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
 import { HeaderExperienciaComponent } from './components/header-experiencia/header-experiencia.component';
+import { FormIngresoComponent } from './components/form-ingreso/form-ingreso.component';
 
 
 @NgModule({
@@ -33,12 +35,14 @@ import { HeaderExperienciaComponent } from './components/header-experiencia/head
     BotonAgregarComponent,
     AddExperienciaComponent,
     HeaderExperienciaComponent,
+    FormIngresoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgCircleProgressModule.forRoot({}),
   ],
   providers: [PortfolioService, 
     UiService],

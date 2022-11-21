@@ -15,9 +15,9 @@ export class AddExperienciaComponent implements OnInit {
 @Output() onAddExperiencia: EventEmitter<Experiencia> = new EventEmitter()
 
 lugar: string=""
-img: string =""
+imagen: string =""
 puesto: string=""
-tareas: string=""
+descripcion: string=""
 fecha: string=""
 showAddExp: boolean = false;
 subscription?: Subscription
@@ -39,9 +39,9 @@ subscription?: Subscription
     
     const nuevaExperiencia = {
       lugar: this.lugar,
-      img: this.img,
+      imagen: this.imagen,
       puesto: this.puesto,
-      tareas: this.tareas,
+      descripcion: this.descripcion,
       fecha: this.fecha,
       esEdit: false
 

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
+  porcentaje: number = 80
+  nombre: string = "comunicación";
+  
   constructor() { }
 
   ngOnInit(): void {
